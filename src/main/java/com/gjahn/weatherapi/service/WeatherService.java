@@ -9,7 +9,8 @@ import org.springframework.web.client.RestTemplate;
 public class WeatherService {
 
     public WeatherModel getWeather(String city) {
-        return getRestTemplate().getForObject("http://api.openweathermap.org/data/2.5/weather?q=" + city + ",pl&appid=73d81deeae46c33e1838a04ba2f8f473", WeatherModel.class);
+
+        return getRestTemplate().getForObject("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=73d81deeae46c33e1838a04ba2f8f473", WeatherModel.class);
     }
 
     @Bean

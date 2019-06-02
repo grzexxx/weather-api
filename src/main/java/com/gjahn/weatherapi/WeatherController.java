@@ -22,6 +22,7 @@ public class WeatherController {
     @PostMapping("/")
     public String index(Model model, @RequestParam("city") String city) {
         model.addAttribute("weather", weatherService.getWeather(city));
+        System.out.println(city);
         return "main";
     }
 }

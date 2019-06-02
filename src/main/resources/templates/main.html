@@ -7,13 +7,16 @@
 <body>
 
 <h1 th:if="${weather!=null && weather.getMain().getTemp() != null}"  th:text="${weather.getMain().getTemp()-273.16}"></h1>
+<h1 th:if="${weather!=null && weather.getMain().getHumidity() != null}"  th:text="${weather.getMain().getHumidity()}"></h1>
+<h1 th:if="${weather!=null && weather.getMain().getPressure() != null}"  th:text="${weather.getMain().getPressure()}"></h1>
+
+<h1 th:if="${weather!=null && weather.getClouds().getAll() != null}"  th:text="${weather.getClouds().getAll()}"></h1>
+<!--
+<h1 th:if="${weather!=null}"  th:text="${weather.getWeather().get(3)}"></h1>-->
 
 <form action="/" method="post">
-
     <input type="text" name="city" placeholder="City:"><br/>
-
     <input type="submit" value="check">
-
 </form>
 
 
