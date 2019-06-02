@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+
+<h1 th:if="${weather!=null && weather.getMain().getTemp() != null}"  th:text="${weather.getMain().getTemp()-273.16}"></h1>
+
+<form action="/" method="post">
+
+    <input type="text" name="city" placeholder="City:"><br/>
+
+    <input type="submit" value="check">
+
+</form>
+
+
+</body>
+</html>
